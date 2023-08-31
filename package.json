@@ -1,0 +1,25 @@
+{
+  "name": "bismuth",
+  "displayName": "Bismuth",
+  "description": "Support for the Bismuth programming language (process calculus)",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "bismuth",
+      "aliases": ["bismith", "bismuth"],
+      "extensions": [".bismuth"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bismuth",
+      "scopeName": "source.bismuth",
+      "path": "./syntaxes/bismuth.tmLanguage.json"
+    }]
+  }
+}

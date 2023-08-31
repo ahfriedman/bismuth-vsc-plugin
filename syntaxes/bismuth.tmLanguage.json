@@ -1,0 +1,72 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "bismuth",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#types"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.bismuth",
+					"match": "\\b(if|while|for|else|proc|define|extern|match|return|select|accept|acceptWhile|offer)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.bismuth",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.bismuth",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign",
+					"match": "#.*$"
+				},
+				{
+					"include": "#comments-inline"
+				}
+			]
+		},
+		"comments-inline": {
+			"patterns": [
+				{
+					"begin": "/\\*",
+					"end": "\\*/",
+					"name": "comment.block"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "storage.type",
+					"match": "\\b(int|str|boolean|var|Channel|Program)\\b"
+				},
+				{
+					"name": "support.type",
+					"match": "\\b(struct|enum|func)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.bismuth"
+}
