@@ -20,7 +20,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.bismuth",
-					"match": "\\b(if|while|for|else|proc|define|extern|match|return|select|accept|acceptWhile|offer)\\b"
+					"match": "\\b(if|while|for|else|proc|define|extern|match|return|select|accept|acceptWhile|offer|import|as)\\b"
 				}
 			]
 		},
@@ -59,7 +59,7 @@
 			"patterns": [
 				{
 					"name": "storage.type",
-					"match": "\\b(int|str|boolean|var|Channel|Program|i32|i64|u32|u64|f32|f64)\\b"
+					"match": "\\b(int|str|boolean|var|Channel|Program|i32|i64|u32|u64|f32|f64|Box)\\b"
 				},
 				{
 					"name": "support.type",
